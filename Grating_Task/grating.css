@@ -1,0 +1,168 @@
+.display_stage {
+    position: fixed;
+    background: #900;
+    left: 5vw;
+    top: 2vh;
+    height: 94vh;
+    width: 90vw;
+    background-color: black;
+    border-radius: 15px;
+    border: 1vh solid #D0D0D0;
+    z-index: 0;
+}
+
+.img {
+  width: 640px;
+  height: 360px;
+  position:relative;
+  top:20%;
+  left:20%;
+  border: 8px solid #000;
+}
+
+.topleftcue {
+  width: 180px;
+  height: 180px;
+  position:absolute;
+  top:28.5%;
+  left:36%;
+  transform: rotate(-147deg);
+}
+
+.toprightcue {
+  width: 180px;
+  height: 180px;
+  position:absolute;
+  top:28.5%;
+  left:52%;
+  transform: rotate(-34deg);
+}
+
+.bottomleftcue {
+  width: 180px;
+  height: 180px;
+  position:absolute;
+  top:52%;
+  left:36.4%;
+  transform: rotate(143deg);
+}
+
+.bottomrightcue {
+  width: 180px;
+  height: 180px;
+  position:absolute;
+  top:52%;
+  left:52%;
+  transform: rotate(39deg);
+}
+
+#canvas1, #backCanvas1{
+  display: block;
+  margin: 0 auto;
+}
+
+#canvas2, #backCanvas2{
+  display: block;
+  margin: 0 auto;
+}
+
+#canvas3, #backCanvas3{
+  display: block;
+  margin: 0 auto;
+}
+
+#canvas4, #backCanvas4{
+  display: block;
+  margin: 0 auto;
+}
+
+.topleftbox {
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-200%,-130%);
+}
+
+.toprightbox {
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(100%,-130%);
+}
+
+.bottomleftbox {
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-200%, 30%);
+}
+
+.bottomrightbox {
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(100%,30%);
+}
+
+.response_div {
+  width: 40w;
+  height: 8vw;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-50%,140%);
+}
+
+.response_button {
+  width: 10vw;
+  height: 10vw;
+  background: #505050;
+  margin: 1vw;
+  position: relative;
+  color: #fff;
+  border-radius:15px;
+  font-size: 24px;
+  vertical-align:top;
+}
+
+.response_button:hover {
+  color: red;
+}
+
+.response_button:active {
+  background-color: black;
+}
+
+.response_button_key {
+  width: 10vw;
+  height: 10vw;
+  background: #505050;
+  margin: 1vw;
+  position: relative;
+  color: #fff;
+  border-radius:15px;
+  font-size: 24px;
+  vertical-align:top;
+}
+
+.display_stage > div, .display_stage > p {
+  color: white;
+}
+
+.fixation {
+  color:white;
+  font-size:250px;
+}
