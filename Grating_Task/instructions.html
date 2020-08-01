@@ -1,0 +1,72 @@
+<!DOCTYPE html><html class=''>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="robots" content="noindex">
+	<title>Grating Task</title>
+	<link rel='stylesheet' type='text/css' href='jspsych.css'>
+	<link rel='stylesheet' type='text/css' href='default_style.css'>
+	<link rel='stylesheet' type='text/css' href='style.css'>	
+</head>
+
+<body>
+
+	<script src="jspsych.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-fullscreen.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-instructions.js"></script>
+	<script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
+    <script src="jatos.js"></script>
+
+<script>
+
+	var instruct_block = {
+		type: 'html-keyboard-response',
+		stimulus: "<p style='font-size:42px;'>Welcome to the Grating Task Experiment.</p><p></p><p style='font-size:42px;''>Press <strong>enter</strong> to begin.</p>",
+		post_trial_gap: 0,
+		timing_response: 180000
+	};
+
+	var instructions_block = {
+		type: 'instructions',
+		data: {
+			trial_id: "instruction"
+		},
+		pages: [
+			"<div style='text-align:left; line-height:1.4; width:1100px; font-size:32px;'><p>This experiment should last around ?? minutes. In this experiment you will see four gratings or Gabor patches (striped patterns)" + 
+			" as shown below: </p>" + "<p>IMAGE</p>" +
+			"<p>You will then see a cue directed to one of the four patches.</p>" + "<p>IMAGE</p>" + 
+			"<p> Next, the patches will disappear momentarily. On reappearance, either one of the four patches or none of them will have changed orientation." +
+			" In each case, your task is to indicate the location of change, or indicate “no change” by pressing one of five response keys.</p>" + 
+			"<p><strong>It is important that you to maintain fixation on a central fixation cross for the duration of the experiment.</strong></p>" +
+			"<p>You should respond as quickly and accurately as possible. The response keys are as follows:</p>" +
+			"<p></p><ul><li><span style = 'color:red'>Word:</span> 'R key'</li>" + 
+			"<li><span style = 'color:green'>Word:</span> 'G key'</li>" + 
+			"<li><span style = 'color:blue'>Word:</span> 'B key'</li></ul></div>"
+		],
+		allow_keys: false,
+		show_clickable_nav: true,
+		timing_post_trial: 2000
+	};
+
+	var instruction_task = [];
+	instruction_task.push({
+		type: 'fullscreen',
+		fullscreen_mode: true
+	});
+
+	instruction_task.push(instruct_block);
+	instruction_task.push(instructions_block);
+
+	jatos.onLoad(function() {
+		jsPsych.init({
+			timeline: instruction_task,
+			fullscreen: false,
+			on_finish: function(data){
+				jatos.startNextComponent();
+			}
+		});
+	});
+
+</script>
+</body>
+</html>

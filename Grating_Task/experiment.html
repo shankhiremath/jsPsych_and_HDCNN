@@ -1,0 +1,49 @@
+<!DOCTYPE html><html class=''>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="robots" content="noindex">
+	<title>Grating Task Experiment</title>
+
+	<link rel='stylesheet' type='text/css' href='jspsych.css'>
+	<link rel='stylesheet' type='text/css' href='default_style.css'>
+	<link rel='stylesheet' type='text/css' href='grating.css'>
+	<link rel="icon" type="image/png" href="brainfavicon.png">
+
+</head>
+
+<body>
+
+	<script src="jspsych.js"></script>
+	<script src='jquery-3.5.1.min.js'></script>
+	<script src="jspsych-fullscreen.js"></script>
+	<script src="jspsych-instructions.js"></script>
+	<script src='jspsych-shank-html-keyboard-response.js'></script>
+	<script src='jspsych-html-keyboard-response.js'></script>
+	<script src='jspsych-survey-text.js'></script>
+	<script src='gratingtask.js'></script>
+	<script src='experiment.js'></script>
+	<script src='jatos.js'></script>
+	
+
+<script>
+
+	//Then actual test for x number of times. Record data and save. Then figure out how to upload and save data.
+
+	jatos.onLoad(function() {
+
+		// Overwrite some vars defined in experiment.js with ones defined as JATOS' JsonInput
+
+		jsPsych.init( {
+			timeline: timeline,
+			fullscreen: true,
+			on_finish: function() {
+                var resultJson = jsPsych.data.get().json();
+                jatos.submitResultData(resultJson, jatos.startNextComponent);
+            }
+		});
+	});	
+
+</script>
+</body>
+</html>
