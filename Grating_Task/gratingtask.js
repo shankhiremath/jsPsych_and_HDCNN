@@ -285,9 +285,8 @@ function getStim() {
 	curr_data[3] = 67
 	curr_data[4] = 72
 	
-	var correct_response = curr_data[randomIndex]
 	curr_data.correct_direction = sides[randomIndex]
-	curr_data.correct_response = correct_response
+	curr_data.correct_response = curr_data[randomIndex]
 	curr_data.angles = angles
 
 	angle1 = Math.random() * 180
