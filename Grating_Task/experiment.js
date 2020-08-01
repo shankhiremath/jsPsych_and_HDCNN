@@ -122,8 +122,10 @@ var getstim_block_prac = {
 		}
 		curr_data.response = data.key_press
 		curr_data.trial_num = current_trial
+		current_trial += 1
 		curr_data.correct = correct
 		console.log(curr_data)
+		curr_data = {}
 	}
 };
 
