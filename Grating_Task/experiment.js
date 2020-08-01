@@ -7,7 +7,7 @@ var curr_data = {}
 var current_trial = 0
 var timeline = []
 var practice_len = 6
-var test_len = 2
+var test_len = 100
 
 timeline.push({
 	type: 'fullscreen',
