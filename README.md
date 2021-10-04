@@ -4,6 +4,6 @@ Following fixation of a central '+' sign, the observer is presented with 4 orien
 
 Click the image to watch the video.
 
-[![Watch the video](https://i.imgur.com/M1LwoEp.png)](https://youtu.be/YC-85nP7KKU)
+[![Watch the video](https://i.imgur.com/M1LwoEp.png) | width = 200](https://youtu.be/YC-85nP7KKU)
 
 Using JATOS (Just Another Tool for Online Studies), studies can be run on your own server. This means that you keep complete control over who can access your result data and can comply with your ethics. JATOS can also be used to run the study at scale using Amazon Mechanical Turk.
